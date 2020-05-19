@@ -15,7 +15,7 @@ class I2S_FORMAT(Enum):
     I2S_STANDARD = 1
     I2S_LEFT_JUSTIFIED = 2
 
-class S7I2Slave(Module, AutoCSR, AutoDoc):
+class S7I2S(Module, AutoCSR, AutoDoc):
     def __init__(self, pads, fifo_depth=256, master=False, concatenate_channels=True, sample_width=16, frame_format=I2S_FORMAT.I2S_LEFT_JUSTIFIED, lrck_ref_freq=100e6, lrck_freq=44100, bits_per_channel=28):
         self.intro = ModuleDoc("""Intro
 
